@@ -1,0 +1,23 @@
+.thumb
+LDR r6, [sp, #284]
+LSL r0,r0,#0
+SUB r7,r7,#7
+LSL r0,r0,#0
+CMP r7,#207
+LSL r0,r0,#0
+LDR r6, [sp, #284]
+LSL r0,r0,#0
+LDR r6, [sp, #284]
+LSL r0,r0,#0
+MOV r0,#3
+MOV r1,#5
+ADD r2,r1,r0
+PUSH {r2}
+SWI #10
+POP {r2}
+SUB r2,#1
+CMP r2,#0
+BEQ #0x16
+SUB r0,r2,#0
+B #0xfffff82c
+B #0xfffff81e
